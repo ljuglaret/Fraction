@@ -1,4 +1,4 @@
-module Fract exposing (Fra,addition,multiplication)
+module Fract exposing (Fra,addition,multiplication,simplifier,a)
 {-|
 # Definition
 @docs Fra
@@ -47,3 +47,7 @@ addition (Fra x) (Fra y) =
 multiplication : Fra ->  Fra ->  Fra  
 multiplication (Fra x) (Fra y) = 
     (simplifier (Fra {num = y.num*x.num , den = x.den*y.den}))
+
+a = multiplication
+        (Fra { den = 4, num = 3 })
+        (Fra { den = 14, num = 9 })
