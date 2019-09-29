@@ -1,7 +1,9 @@
-module Fract exposing (Fra,addition,multiplication,simplifier,a)
+module Fract exposing (Fra,addition,multiplication,simplifier)
 {-|
 # Definition
 @docs Fra
+# Fonctions
+@docs addition , multiplication , simplifier
 -}
 {-|-}
 type  Fra =  Fra {num : Int , den : Int }
