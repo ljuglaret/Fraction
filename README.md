@@ -1,4 +1,4 @@
-## Elm Combinatoire
+## Fractions
 
 Permet de manipuler les fractions
 
