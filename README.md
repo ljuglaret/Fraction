@@ -1,35 +1,36 @@
-# Fractions
+# Fraction
+
 
 Allows manipulation of fractions : simplify, add two fractions, create a fraction, access the numerator and denominator.
 
-## How to use this package
+## Create fraction
+createFraction : (Int, Int) -> Maybe Fraction
 
-### Create Fractions
 
-```elm
-f1 : Maybe Fraction
-f1 = createFraction(17,15)
--- Just (Fraction { denominator = 15, numerator = 17 })
+## Access to the numerator
+getNumerator : Fraction -> Int 
 
-f2 : Maybe Fraction
-f2 = createFraction(17,0)
--- Nothing : Maybe Fraction
-```
 
-### Add two fractions and simplify
+## Access to the denominator
+getDenominator : Fraction -> Int 
 
-```elm
-s : Maybe Fraction
-s = f1 |> (Maybe.andThen (\m ->
-        f2 |> (Maybe.andThen (\m2 ->
-            Just (simplify (addition m m2))))))
-```
+    
+## Simplify
+simplify :  Fraction  ->  Fraction 
 
-### Access the denominator and numerator
+## Add
+addition : Fraction ->  Fraction->  Fraction   
 
-```elm
-a =  f1 |> (Maybe.andThen (\m -> Just (getNumerator m)))
-b =  f1 |> (Maybe.andThen (\m -> Just (getdenominator m)))
--- a = Just 17
--- b = Just 15
-```
+## Multiply      
+multiplication : Fraction ->  Fraction ->  Fraction  
+
+## Compare
+### fraction1 > fraction 2
+sup : Fraction -> Fraction -> Bool 
+
+### fraction1 == fraction 2
+eq : Fraction -> Fraction -> Bool 
+
+### fraction1 < fraction 2
+inf : Fraction -> Fraction -> Bool 
+ 
